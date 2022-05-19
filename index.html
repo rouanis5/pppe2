@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+        <!-- mapbox CSS -->
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- roboto font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- AOS css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <!-- css -->
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- mapbox JS -->
+        <!-- plz, dont add defer here -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+        <title>Bootstrap template one</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 sticky-top">
+            <div class="container">
+                <a href="#" class="navbar-brand fw-bold">IMO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto text-capitalize">
+                        <li class="nav-item"><a href="#learn" class="nav-link">services</a></li>
+                        <li class="nav-item"><a href="#questions" class="nav-link">questions</a></li>
+                        <li class="nav-item"><a href="#instructions" class="nav-link">testimonials</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="bg-dark py-lg-0 p-5 text-center text-sm-start">
+            <div class="container d-sm-flex justify-content-between align-items-center text-light">
+                <div>
+                    <h1>Rent an <span class="text-warning">Expert</span></h1>
+                    <p class="lead my-4">
+                        Hi, I am <span class="fw-bold">IDJA Mohamed Ouanis</span> from Algeria. I am a web developer. I
+                        studied LPDWI in Boumerdes. I am curious about web. I have the talent, creativity and knowledge
+                        to build your future website
+                    </p>
+                    <button
+                        type="button"
+                        class="btn btn-primary btn-lg"
+                        data-bs-toggle="modal"
+                        data-bs-target="#enrollementForm"
+                    >
+                        Start The Enrollment
+                    </button>
+                </div>
+                <img class="img-fluid w-50 d-md-block d-none pt-lg-5 p-0" src="./images/showcase.svg" alt="showcase" />
+            </div>
+            <div
+                class="modal fade"
+                id="enrollementForm"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Enrollment</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="lead">Fill out this form and we will get back to you</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="first-name" class="col-form-label">first name:</label>
+                                    <input type="text" class="form-control" id="first-name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="last-name" class="col-form-label">last name:</label>
+                                    <input type="text" class="form-control" id="last-name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="col-form-label">email:</label>
+                                    <input type="email" class="form-control" id="email" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-primary text-light p-5">
+            <div class="container d-md-flex justify-content-between align-items-center">
+                <h3 class="text-capitalize mb-md-0 mb-3">sign up for our newsletter</h3>
+                <div class="input-group input-newsletter">
+                    <input type="text" class="form-control" placeholder="Enter Email" />
+                    <button class="btn btn-outline-secondary btn-lg btn-dark text-white" type="button">Submit</button>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light p-5">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-md">
+                        <div data-aos="fade-up" data-aos-duration="500" class="card bg-dark text-white p-2 rounded">
+                            <div class="card-body text-center">
+                                <div class="h1 mb-3">
+                                    <i class="bi bi-brush h1"></i>
+                                </div>
+                                <h3 class="card-title">Designer</h3>
+                                <p class="card-text">
+                                    I value simple content structure, clean design patterns, and thoughtful
+                                    interactions.
+                                </p>
+                                <button type="submit" class="btn btn-primary text-white">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="700"
+                            class="card bg-secondary text-white p-2 rounded"
+                        >
+                            <div class="card-body text-center">
+                                <div class="h1 mb-3">
+                                    <i class="bi bi-file-code h1"></i>
+                                </div>
+                                <h3 class="card-title">Front-end Developer</h3>
+                                <p class="card-text">
+                                    I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+                                </p>
+                                <button type="submit" class="btn btn-dark text-white">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div data-aos="fade-up" data-aos-duration="900" class="card bg-dark text-white p-2 rounded">
+                            <div class="card-body text-center">
+                                <div class="h1 mb-3">
+                                    <i class="bi bi-journal-bookmark-fill h1"></i>
+                                </div>
+                                <h3 class="card-title">Mentor</h3>
+                                <p class="card-text">
+                                    I genuinely care about people, and love helping fellow designers work on their
+                                    craft.
+                                </p>
+                                <button type="submit" class="btn btn-primary text-white">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light p-5" id="learn">
+            <div class="container">
+                <div class="row align-items-center justify-content-between g-5">
+                    <div class="col-md">
+                        <img
+                            src="./images/fundamentals.svg"
+                            alt="fundamentals"
+                            class="img-fluid"
+                            data-aos="fade-right"
+                        />
+                    </div>
+                    <div class="col-md">
+                        <h2 class="text-capitalize" data-aos="fade-left">Order your website from scratch !</h2>
+                        <p class="lead" data-aos="fade-left">
+                            A Website from scratch is a custom designed and hand-coded website.
+                        </p>
+                        <p data-aos="fade-left">
+                            So making a website from scratch is simply means that the site is meticulously constructed
+                            according to the clients' needs, and their specific business requirements. Websites have
+                            become more than just simple marketing tools for businesses.
+                        </p>
+                        <a href="#" class="btn btn-dark mt-3" data-aos="flip-up"
+                            ><i class="bi bi-chevron-right"></i> Read More</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-dark text-light p-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-between g-5">
+                    <div class="col-md">
+                        <h2 class="text-capitalize" data-aos="fade-right">Order your WordPress website !</h2>
+                        <p class="lead" data-aos="fade-right">
+                            Many years ago, WordPress was primarily a tool to create a blog, rather than more
+                            traditional websites.
+                        </p>
+                        <p data-aos="fade-right">
+                            That hasn’t been true for a long time, though. Nowadays, thanks to changes to the core code,
+                            as well as WordPress’ massive ecosystem of plugins and themes, you can create any type of
+                            website with WordPress.
+                        </p>
+                        <a href="#" class="btn btn-light mt-3" data-aos="flip-up"
+                            ><i class="bi bi-chevron-right"></i> Read More</a
+                        >
+                    </div>
+                    <div class="col-md">
+                        <img src="./images/react.svg" alt="react" class="img-fluid" data-aos="fade-left" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="questions" class="bg-light p-5">
+            <div class="container">
+                <h2 class="text-center text-capitalize mb-5" data-aos="zoom-in">frequently asked questions</h2>
+                <div class="accordion accordion-flush" id="faqs">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" data-aos="flip-up" id="qst1">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#answer1"
+                                aria-expanded="false"
+                                aria-controls="answer1"
+                            >
+                                What size companies do you produce web designs for?
+                            </button>
+                        </h2>
+                        <div
+                            id="answer1"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="qst1"
+                            data-bs-parent="#faqs"
+                        >
+                            <div class="accordion-body">
+                                We like to work with all sorts and sizes of businesses and individuals, and we bring the
+                                same skills used to support our celebrity and big business clients to the work we do for
+                                smaller clients. We’re just as keen to work with small businesses as we are large ones,
+                                and as a local firm we’re ideally placed to understand the needs of growing
+                                organisations.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" data-aos="flip-up" id="qst2">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#answer2"
+                                aria-expanded="false"
+                                aria-controls="answer2"
+                            >
+                                Do you redesign existing websites?
+                            </button>
+                        </h2>
+                        <div
+                            id="answer2"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="qst2"
+                            data-bs-parent="#faqs"
+                        >
+                            <div class="accordion-body">
+                                We certainly can do! It's important to approach website redesignssensitively to make
+                                sure your reasons for redesigning are valid. This will ensure the project is an overall
+                                success from your ROI point of view.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" data-aos="flip-up" id="qst3">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#answer3"
+                                aria-expanded="false"
+                                aria-controls="answer3"
+                            >
+                                Will my website work on smart phones and tablets as well?
+                            </button>
+                        </h2>
+                        <div
+                            id="answer3"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="qst3"
+                            data-bs-parent="#faqs"
+                        >
+                            <div class="accordion-body">
+                                It most certainly will! More people are accessing the web via small screens than ever,
+                                and the trend is likely to carry on. If your site doesn’t display or work properly on a
+                                mobile or tablet screen, you risk losing a big chunk of your potential audience. It
+                                means mobile responsive web design is essential these days. Every website we create is
+                                mobile responsive.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" data-aos="flip-up" id="qst4">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#answer4"
+                                aria-expanded="false"
+                                aria-controls="answer4"
+                            >
+                                Can you help me rank high in Google?
+                            </button>
+                        </h2>
+                        <div
+                            id="answer4"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="qst4"
+                            data-bs-parent="#faqs"
+                        >
+                            <div class="accordion-body">
+                                A page one position in the Google search results is like gold dust. Not so long ago it
+                                was relatively easy to achieve. These days it’s a lot more challenging, and getting it
+                                wrong can affect your reputation. Thankfully we have all the SEO tools and know-how to
+                                maximise your chances and some happy customers to vouch for us.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" data-aos="flip-up" id="qst5">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#answer5"
+                                aria-expanded="false"
+                                aria-controls="answer5"
+                            >
+                                Can you convert my existing website into WordPress?
+                            </button>
+                        </h2>
+                        <div
+                            id="answer5"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="qst5"
+                            data-bs-parent="#faqs"
+                        >
+                            <div class="accordion-body">
+                                Yes, we can migrate your website to WordPress. However it’s important you don’t lose any
+                                search engine visibility in the process, so we’ll cover that too.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" data-aos="flip-up" id="qst6">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#answer6"
+                                aria-expanded="false"
+                                aria-controls="answer6"
+                            >
+                                If WordPress is free, why do I pay for your services?
+                            </button>
+                        </h2>
+                        <div
+                            id="answer6"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="qst6"
+                            data-bs-parent="#faqs"
+                        >
+                            <div class="accordion-body">
+                                WordPress is free to use. We charge you for design and development services but once
+                                your site is finished, you don’t have to pay any ongoing costs for using the platform
+                                itself.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="instructions" class="bg-primary p-5">
+            <div class="container">
+                <div class="text-light text-center mb-5">
+                    <h2 data-aos="zoom-in">Testimonials</h2>
+                    <p class="lead" data-aos="zoom-in">What people say about us</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card bg-light" data-aos="fade-up" data-aos-duration="500">
+                            <div class="card-body text-center">
+                                <img
+                                    src="https://randomuser.me/api/portraits/men/11.jpg"
+                                    alt="a man 1"
+                                    class="rounded-circle mb-3"
+                                />
+                                <h3 class="card-title">John Doe</h3>
+                                <p class="card-text">"Website was the best investment I ever made. Thank You!"</p>
+                                <ul class="list-unstyled d-flex justify-content-center gap-2">
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star text-warning"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card bg-light" data-aos="fade-up" data-aos-duration="700">
+                            <div class="card-body text-center">
+                                <img
+                                    src="https://randomuser.me/api/portraits/women/10.jpg"
+                                    alt="a woman 1"
+                                    class="rounded-circle mb-3"
+                                />
+                                <h3 class="card-title">Maria Wolskey</h3>
+                                <p class="card-text">"It's really wonderful, we've just launched our 5th website!"</p>
+                                <ul class="list-unstyled d-flex justify-content-center gap-2">
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star text-warning"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card bg-light" data-aos="fade-up" data-aos-duration="900">
+                            <div class="card-body text-center">
+                                <img
+                                    src="https://randomuser.me/api/portraits/men/1.jpg"
+                                    alt="a man 2"
+                                    class="rounded-circle mb-3"
+                                />
+                                <h3 class="card-title">Amar Awarane</h3>
+                                <p class="card-text">"It's exactly what I've been looking for. The very best."</p>
+                                <ul class="list-unstyled d-flex justify-content-center gap-2">
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star text-warning"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card bg-light" data-aos="fade-up" data-aos-duration="1100">
+                            <div class="card-body text-center">
+                                <img
+                                    src="https://randomuser.me/api/portraits/women/11.jpg"
+                                    alt="a woman 2"
+                                    class="rounded-circle mb-3"
+                                />
+                                <h3 class="card-title">Sara Welge</h3>
+                                <p class="card-text">
+                                    " I have gotten at least 50 times the value from website. Really good."
+                                </p>
+                                <ul class="list-unstyled d-flex justify-content-center gap-2">
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star-fill text-warning"></i></li>
+                                    <li><i class="bi bi-star text-warning"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="p-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md">
+                        <h2 class="text-center mb-3" data-aos="fade-right">Contact info</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" data-aos="flip-up">
+                                <span class="fw-bold">Email: </span>ouanis42@gmail.com
+                            </li>
+                            <li class="list-group-item" data-aos="flip-up">
+                                <span class="fw-bold">Phone number 1: </span>+213-559-555-145
+                            </li>
+                            <li class="list-group-item" data-aos="flip-up">
+                                <span class="fw-bold">Phone number 2: </span>+213-659-555-145
+                            </li>
+                            <li class="list-group-item" data-aos="flip-up">
+                                <span class="fw-bold">Fax: </span>+213-26-283-234
+                            </li>
+                            <li class="list-group-item" data-aos="flip-up">
+                                <span class="fw-bold">Address: </span> Cité 580 logts Bt 15 n°2, Boumèrdes , Algeria
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md">
+                        <div id="map" class="w-100 h-100 rounded" style="min-height: 250px" data-aos="zoom-in"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-dark text-white p-3">
+            <div class="container">
+                <div class="row text-center text-capitalize">
+                    <div class="col">
+                        <p class="h6">Copyright &copy; 2022 IDJA M. Ouanis</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="scrollTop" class="position-fixed bottom-0 end-0 m-3 fade">
+            <a href="#" class="h1 text-primary px-2 py-1 bg-white rounded shadow-sm">
+                <i class="bi bi-arrow-up-circle"></i>
+            </a>
+        </div>
+        <script src="./js/map.js" type="module"></script>
+        <!-- appear scrollTop button JS -->
+        <script src="./js/scroll.js" type="module"></script>
+        <!-- bootstrap js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+        <!-- AOS js -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>

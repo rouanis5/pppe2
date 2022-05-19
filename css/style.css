@@ -1,0 +1,10 @@
+body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+/* breakpoint $md = 768px */
+@media (min-width: 768px) {
+    .input-newsletter {
+        width: 50% !important;
+    }
+}
